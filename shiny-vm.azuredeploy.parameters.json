@@ -3,16 +3,13 @@
   "contentVersion": "2.0.0.1",
   "parameters": {
     "virtualMachineName": {
-      "value": "Web-DplTst-02"
+      "value": "SHINY-VM-1"
     },
     "virtualMachineSize": {
         "value": "Standard_D2s_v4"
     },
-    "adminUsername": {
-      "value": "Web-DplTst-02-admin"
-    },
     "adminPassword": {
-      "value": "1l#Tg7Yt^XF2e"
+        "value": "<8 - 123 chars, including upper case, lower case, a number, a special character - DON'T COMMIT THE PASSWORD TO GITHUB>" 
     },
     "existingVirtualNetworkName": {
       "value": "vnet-AzureMigrateTest-mpn-eastus-001"
@@ -26,7 +23,8 @@
     "resourceTags": {
         "value": {
           "Environment": "DEV",
-          "Service": "Infrastructure"
+          "Service": "IIS",
+          "VMName": "SHINY-VM-1"
         }
     }
   }

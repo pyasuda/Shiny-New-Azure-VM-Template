@@ -60,6 +60,7 @@
     },
     "adminUsername": {
       "type": "String",
+      "defaultValue": "[concat(parameters('virtualMachineName'),'-admin')]",
       "minLength": 8,
       "maxLength": 20,
       "metadata": {
@@ -70,7 +71,7 @@
       "type": "SecureString",
       "minLength": 13,
       "metadata": {
-        "description": "The admin password of the VM"
+        "description": "13 - 123 chars, including upper case, lower case, a number, a special character"
       }
     },
     "location": {
