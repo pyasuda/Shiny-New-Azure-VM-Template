@@ -1,15 +1,15 @@
 {
   "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
-  "contentVersion": "2.0.0.1",
+  "contentVersion": "1.0.0.0",
   "parameters": {
     "virtualMachineName": {
       "value": "SHINY-VM-1"
     },
     "virtualMachineSize": {
-        "value": "Standard_D2s_v4"
+      "value": "Standard_D2s_v4"
     },
     "adminPassword": {
-        "value": "<8 - 123 chars, including upper case, lower case, a number, a special character - DON'T COMMIT THE PASSWORD TO GITHUB>" 
+      "value": "<8 - 123 chars, including upper case, lower case, a number, a special character - DON'T COMMIT THE PASSWORD TO GITHUB>"
     },
     "existingVirtualNetworkName": {
       "value": "vnet-AzureMigrateTest-mpn-eastus-001"
@@ -20,9 +20,12 @@
     "existingVnetResourceGroup": {
       "value": "rg-AzureMigrateTest-mpn-001"
     },
+    "enableAcceleratedNetworking": {
+      "value": true
+    },
     "resourceTags": {
         "value": {
-          "Environment": "DEV",
+          "Environment": "TEST-DEPLOYMENT",
           "Service": "IIS",
           "VMName": "SHINY-VM-1"
         }

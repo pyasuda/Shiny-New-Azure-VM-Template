@@ -1,6 +1,6 @@
 {
   "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
-  "contentVersion": "1.0.1.0",
+  "contentVersion": "1.0.0.0",
   "parameters": {
     "virtualMachineName": {
       "type": "String",
@@ -81,6 +81,17 @@
         "description": "Location for all resources."
       }
     },
+    "enableAcceleratedNetworking": {
+      "type": "bool",
+      "defaultValue": true,
+      "allowedValues": [
+        true,
+        false
+      ],
+      "metadata": {
+        "description": "Set true for VMs with 4 or more vCPUs, and exceptions like D2s_v4"
+      }
+    },
     "resourceTags": {
       "type": "object",
       "defaultValue": {
@@ -134,7 +145,7 @@
             }
           }
         ],
-        "enableAcceleratedNetworking": true
+        "enableAcceleratedNetworking":"[parameters('enableAcceleratedNetworking')]" 
        }
     },
     {
