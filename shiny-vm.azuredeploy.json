@@ -159,7 +159,10 @@
         "name": "[variables('publicIpAddressSku')]"
       },
       "properties": {
-        "publicIpAllocationMethod": "[variables('publicIpAddressType')]"
+        "publicIpAllocationMethod": "[variables('publicIpAddressType')]",
+        "dnsSettings": {
+          "domainNameLabel": "[toLower(parameters('virtualMachineName'))]"
+        }
       }
     },
     {
@@ -215,6 +218,7 @@
               "name": "[concat('dsk-vm-',parameters('virtualMachineName'),'-data1')]",
               "lun": 0,
               "createOption": "[variables('dataDisk').createOption]",
+              "caching": "[parameters('dataDiskCaching')]",
               "writeAcceleratorEnabled": "[variables('dataDisk').writeAcceleratorEnabled]",
               "diskSizeGB": "[variables('dataDisk').diskSizeGB]",
               "managedDisk": {
@@ -253,6 +257,10 @@
     "adminUsername": {
       "type": "String",
       "value": "[parameters('adminUsername')]"
+    },
+    "FQDN": {
+      "type": "string",
+      "value": "[reference(resourceId('Microsoft.Network/publicIpAddresses',variables('publicIpAddressName'))).dnsSettings.FQDN]" 
     }
   }
 }
