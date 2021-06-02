@@ -1,9 +1,9 @@
 # Shiny-New-Azure-VM-Template
-Template for a generic Azure VM from a Windows server image
-These parameters are not included in the accompanying parameters file, but can be adde - default value shown:
-1. imageOffer WindowsServer
-2. imageSku 2019-Datacenter
-3. adminUsername <VirtualMachineName>-admin
+Template for a generic Azure VM from a Windows server image. 
+These parameters are not included in the accompanying parameters file, but can be added - default value shown:
+1. imageOffer *WindowsServer*
+2. imageSku *2019-Datacenter*
+3. adminUsername \<VirtualMachineName\>-*admin*
 4. location (Extracted from Resource Group)
 
 These settings can only be changed in the azuredeploy.json file

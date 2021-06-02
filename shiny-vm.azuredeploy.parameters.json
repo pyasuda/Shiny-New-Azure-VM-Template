@@ -25,7 +25,7 @@
     },
     "resourceTags": {
         "value": {
-          "Environment": "TEST-DEPLOYMENT",
+          "Environment": "TEST",
           "Service": "IIS",
           "VMName": "SHINY-VM-1"
         }
