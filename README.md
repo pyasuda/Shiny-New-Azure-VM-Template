@@ -12,5 +12,6 @@ These settings can only be changed in the azuredeploy.json file
 3. StandardSSD_LRS OS disk 
 4. Image version latest
 5. Eastern Standard Time time zone
-6. Enable automatic updates
-7. Provision VM Agent
+6. Enable/Disable accelerated networking - not all VM sizes support accelerated networking
+7. Enable automatic updates
+8. Provision VM Agent
